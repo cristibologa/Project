@@ -47,7 +47,7 @@
 						<article class="media">
 							<div class="media-left">
 								<figure class="image is-50x50">
-									<img src="http://openweathermap.org/img/w/{{ weather.icon }}.png" alt="Image">
+									<img src="https://openweathermap.org/img/wn/{{ weather.icon }}@2x.png" alt="Image">
 								</figure>
 							</div>
 							<div class="media-content">
@@ -60,6 +60,11 @@
 									</p>
 								</div>
 							</div>
+							<div class="media-right">
+                                <a href="{% url 'delete_city' city_name=weather.city %}">
+                                    <button class="delete"></button>
+                                </a>
+                            </div>
 						</article>
 					</div>
 					{% endfor %}

@@ -2,7 +2,7 @@ from django.shortcuts import render
 import requests
 from .models import City
 
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 import requests
 
 from .forms import CityForm
@@ -43,3 +43,9 @@ def index(request):
 
     # returns the index.html template
     return render(request, 'weather/index.html', context)
+
+
+def delete_city(request, city_name):
+    city = City.objects.filter(name=city_name).order_by('id').first()
+    city.delete()
+    return redirect('index')
