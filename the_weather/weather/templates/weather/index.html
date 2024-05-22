@@ -13,6 +13,17 @@
 <body>
     <div class="wraper">
 
+        <div class="errors">
+            {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+        
+
         <section class="section">
             <div class="title__section">
                     <h1 >
@@ -66,6 +77,5 @@
         <footer class="footer">
         </footer>
     </div>
-    
-</body>
-</html>
+
+ 

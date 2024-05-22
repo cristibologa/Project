@@ -1,6 +1,14 @@
  body{
 	font-size: 16px;
  }
+ul{
+	margin: 0;
+}
+li{
+	padding: 0;
+	list-style: none;
+}
+
  .wraper{
 	min-height: 100vh;
 	background: rgb(5,57,192);
@@ -91,3 +99,7 @@
 	transform: rotate(-45deg);
   }
   
+.errors{
+	color: #fff;
+	font-size: 1.2rem;
+}
